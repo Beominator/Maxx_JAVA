@@ -96,7 +96,19 @@ public class input {
 		 	*/
 		
 		// c언어, 자바, 건축학개론 시험성적을 입력하세요.
-
+		// 세 과목의 총점과 평균을 각각 출력하세요.
+		int c, java, build;
+		System.out.println("c언어 : ");
+		c = scan.nextInt();
+		System.out.println("자바 : ");
+		java = scan.nextInt();
+		System.out.println("건축학개론 : ");
+		build = scan.nextInt();
+		
+		int total = c + java + build;
+		System.out.println("총점 : "+total+"점");
+		int avg = (total)/3;
+		System.out.println("평균 : "+avg+"점");
 		
 
 		
