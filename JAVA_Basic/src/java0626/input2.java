@@ -30,7 +30,7 @@ public class input2 {
 		name2 = scan.nextLine();
 		System.out.println("소속부서2 : ");
 		part2 = scan.nextLine();
-		int pay;
+		int pay = 0;
 		double dtax = 0.08;
 		System.out.println("급여1 : ");
 		pay = scan.nextInt();
@@ -40,6 +40,14 @@ public class input2 {
 		pay = scan.nextInt();
 		double 실수령액2 = pay - (pay*dtax);
 		System.out.println("직원2 실수령액2 : "+실수령액2+"원");
+		
+		// scan.nextLine();		버퍼 비우기 숫자 다음에 문자를 쓸 때.
+		
+		/*
+		 	next() - 스페이스키, 탭키, 엔터키를 누르면 입력 끝.
+		 	nextLine() - 엔터키 누르면 입력 끝.
+		 */
+		
 		
 		
 		
