@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Dice {
 
 	public static void main(String[] args) {
+		DiceGame game = new DiceGame();
+		game.init();		// 주사위 게임 초기설정 - 참가인원 및 참가자 이름
+		game.diceThrow();	// 참가자수에 맞게 주사위 던지기
+		game.result();		// 모든 참가자들의 주사위값 비교
+		
 		
 		
 	}
