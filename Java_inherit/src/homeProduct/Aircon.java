@@ -25,5 +25,10 @@ public class Aircon extends House{
 		System.out.println("현재 바람세기 : " + windText[wind]);
 	}
 	
+	@Override
+	void power() {
+		super.onOff = !super.onOff;
+		System.out.println("에어컨 전원 : " + super.onOff);
+	}
 	
 }
