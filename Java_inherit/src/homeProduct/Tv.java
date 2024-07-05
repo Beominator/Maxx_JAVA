@@ -26,6 +26,7 @@ public class Tv extends House{
 		System.out.println("Tv 전원 : " + super.onOff);
 	}
 }
+
 // 오버로딩 - 새로운 메서드를 정의하는 것.
 // 오버라이딩 - 기존의 메서드를 재정의 하는 것.
 
