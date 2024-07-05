@@ -6,4 +6,9 @@ public class Computer extends House{
 	Computer(String brand, int price){
 		super(brand,price);
 	}
+	
+	@Override
+	void power() {
+		
+	}
 }
