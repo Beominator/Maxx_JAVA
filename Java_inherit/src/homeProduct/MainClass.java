@@ -10,16 +10,38 @@ public class MainClass {
 		tv.brand = "삼성";
 		tv.power();
 		tv.power();
+		tv.channelUp();
 		
 		Aircon air = new Aircon();
 		air.brand="LG휘센";
 		System.out.println( air.brand );
 		air.power();
 		air.power();
+		air.windControl();
+		
+		
+		System.out.println(" 다형성 ");
+		House tv2 = new Tv("LG", 1500000);
+		tv2.power();
+		House item = new Tv("삼성", 1750000);
+		item.power();
+		item = new Aircon("휘센", 1030000);
+		
+		// tv 객체 100개 에어컨 객체 30개
+		
+		House[] arr = {new Tv(), new Aircon(), new Computer()};
 		
 	}
 
 }
+
+// 클래스들의 관계 - 상속 관계
+// 상속 관계에 놓여있는 클래스들은 부모 클래스와 자식 클래스로 나뉜다.
+// 부모 클래스의 필드(변수), 메서드를 하위 클래스(자식 클래스)에서 사용 가능하다.
+// 1. 상속은 재사용을 위해 사용한다. - 클래스들간의 중복코드를 하나의 클래스로 통합시켜 사용
+// 2. 상위 클래스(부모 클래스)의 필드(변수), 메서드를 모두 하위(자식)클래스에서 사용하지 못한다. - 제어자에 따라, 패키지에 따라 제한적이다.
+// 3. 하위(자식)클래스에서 부모를 지칭하는 예약어는 super이다.
+
 
 // 클래스 상속
 // 상속 하려면 자식클래스 이름 뒤에 extends 부모 클래스 이름
