@@ -57,7 +57,7 @@ public class Study2 {
 //			if(name.contains("김"));
 //			System.out.println( name1 );
 		for(int i=0; i<nam.length; i++) {
-			if(nam.contains "김") {
+			if(nam[i].contains ("김")) {
 				System.out.println( nam[i] );
 		}
 		}
