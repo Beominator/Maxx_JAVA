@@ -64,7 +64,7 @@ class Out{
 		}
 	}
 	
-	private class 인스턴스내부클래스{		// static 변수, 메서드 불가
+	class 인스턴스내부클래스{		// static 변수, 메서드 불가
 		public int age;
 		private String name;
 		void setName(String name) {
