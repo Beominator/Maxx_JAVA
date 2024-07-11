@@ -28,10 +28,43 @@ class BankAccount{
 			// 출금액이 부족하다면
 			System.out.println("잔액 부족! 출금 불가.");
 		}
+			
+		// 정적 내부 클래스
+		static class BankInfo{
+			void showBankName() {
+				System.out.println("은행 이름 : "+bankName);
+			}
+		}
+		
+		// 지역 내부 클래스
+		public void applyLoan(int amount) {		// 대출 신청
+			class Loan{							// 지역 내부 클래스 - 대출
+				void progress() {
+					System.out.println("대출 신청 금액 : " +amount);
+				}
+			
+				
+			}
+			Loan loan = new Loan();
+			loan.progress();
+		}
+		
+		// 익명 내부 클래스
+		public void interestCalc() {
+			Runnable interest = new Runnable() {
+				@Override
+				public void run() {
+					int interestMoney = (int)(balance*0.03);
+					balance += interestMoney;
+					System.out.println("이자 지급 : " + balance);
+				}
+			};
+			interest.run();
+		}
 		
 	}
-}
-public static class InnerClass2 {
+
+public class InnerClass2 {
 
 	public static void main(String[] args) {
 		BankAccount account = new BankAccount(3000000);
@@ -43,11 +76,21 @@ public static class InnerClass2 {
 		tran.withdraw(200000);
 		account.showBalance();
 		
+		// 정적 내부 클래스 객체 생성
+		BankAccount.BankInfo info = new BankAccount.BankInfo();
+		info.showBankName();
+		
+		// 지역 내부클래스 사용
+		account.applyLoan(4000000);
+		
+		// 익명 내부클래스 사용
+		account.interestCalc();
+		
 
 	}
 
 }
-}
+
 /*
 	클래스 : BankAccount;
 	BankAccount 내부클래스 ->
