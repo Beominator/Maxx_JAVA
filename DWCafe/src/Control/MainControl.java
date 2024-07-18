@@ -22,6 +22,9 @@ public class MainControl {
 		System.out.println( tree.tailMap(20));
 		System.out.println( tree.floorKey(15));
 		System.out.println( tree.floorEntry(15));
+		System.out.println( tree.subMap(10, 40));
+		System.out.println( tree.lowerKey(25));
+		System.out.println( tree.higherKey(40));
 		
 //		System.out.println("=== DW 카페 주문 키오스크 ===\n");
 //		System.out.println("=== 화면을 터치하지 마세요 ===\n");
