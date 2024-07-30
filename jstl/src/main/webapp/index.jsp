@@ -3,20 +3,33 @@
     pageEncoding="UTF-8"%>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
+
+
+
+<a href="/main.jsp">로그인 및 회원가입</a><br>
+<a href = "/board.jsp">게시판</a><br>
+<a href = "/inquiry">문의</a>
+<%--     
+<jsp:forward page="" />
+<%
+	pageContext.forward("경로");	
+%>    
+
+--%>
+
 <%-- core 태그 변수 --%>
-<c:set var="num" value="10"/>		//
+<c:set var="num" value="10"/>		
 
 ${ num +20 }
 <c:set var="num" value="300" scope="session"/>
 ${sessionScope.num }
 
 <%-- core 태그 조건문 --%> 
-<c:if test="${30>20 }">		//
+<c:if test="${30>20 }">		
 	30>20 참이다
 </c:if>
 
-<c:choose>		//
+<c:choose>		
 	<c:when test="${num>5 }">
 		<h1> 5보다 크다</h1>
 	</c:when>
@@ -30,7 +43,7 @@ ${sessionScope.num }
 </c:choose>
 
 <%-- core태그 반복문 --%>
-<c:forEach begin="1" end="10" step="1">		//
+<c:forEach begin="1" end="10" step="1">		
 	내가 반복된다.
 </c:forEach>
 <%
