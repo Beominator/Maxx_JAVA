@@ -2,8 +2,8 @@ package study;
 
 public class Board {
 	private int board_id;
-	private String writer;
 	private String title;
+	private String writer;
 	private String content;
 	private int hit;
 	
@@ -21,17 +21,19 @@ public class Board {
 	public void setBoard_id(int board_id) {
 		this.board_id = board_id;
 	}
-	public String getWriter() {
-		return writer;
-	}
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
+	
+	
 	public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
 	public String getContent() {
 		return content;

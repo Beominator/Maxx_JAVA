@@ -4,13 +4,13 @@
 
 <form method="post" action = "boardSave.jsp" enctype="multipart/form-data">
 	<div id = "writeBox">
-		<div class = "writteInput">
-			<label></label>
-			<input type = "text name = "title" id = "title">
+		<div class = "writeInput">
+			<label>제목</label>
+			<input type = "text" name = "title" id = "title">
 		</div>
 		<div class = "writeInput">
 			<label>이미지</label>
-			<input type = "file name = "boardImg" id = "boardImg" accept=".jpg .png .jpeg .gif">
+			<input type = "file" name = "boardImg" id = "boardImg" accept=".jpg, .png, .jpeg, .gif">
 							<!-- accept="image/* 	accept="video/*" -->
 		</div>
 		<div class = "writeInput">
