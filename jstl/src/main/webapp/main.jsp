@@ -8,9 +8,9 @@
 </head>
 <body>
 
-	<a href="/member">회원가입</a>
+	<a href="/Member">회원가입</a>
 	
-	<form method="post" action = "/member">
+	<form method="post" action = "/Member">
 		<input type = "text" name = "id" placeholder = "아이디"><br>
 		<input type = "password" name = "pw" placeholder = "비밀번호"><br>
 		<button>로그인</button>
