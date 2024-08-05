@@ -88,4 +88,36 @@ public class BoardRep extends DBConnect{
 			e.printStackTrace();
 		}
 	}
+
+	public void delete(int bid) {	// 게시글 삭제
+		String sql = "delete from board where board_id=?";
+		
+		try {
+			pt = conn.prepareStatement(sql);
+			pt.setInt(1, bid);
+			pt.executeUpdate();
+			
+		}catch(SQLException e) {
+			System.out.println("게시물 삭제 실패");
+		}
+		
+		
+	}
+
+	public void update(BoardDTO dto) {	// 게시글 수정
+		
+		String sql = "update board set title=?, content=? where board_id=?";
+		
+		try {
+			pt = conn.prepareStatement(sql);
+			pt.setString(1, dto.getTitle());
+			pt.setString(2, dto.getContent());
+			pt.setInt(3, dto.getBoard_id());
+			pt.executeUpdate();
+			
+		}catch(SQLException e) {
+			System.out.println("게시글 수정 실패");
+			e.printStackTrace();
+		}
+	}
 }

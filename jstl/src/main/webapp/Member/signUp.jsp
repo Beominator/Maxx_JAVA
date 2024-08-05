@@ -48,15 +48,15 @@
 	alert(IdList[0]);
 
 	$("input[name=userId]").on("keyup", function(){
-		var id = $(this).val()
+		var id = $(this).val();
 		if ( IdList.indexOf( id ) == -1){	// 입력 아이디가 중복이 아니다
 			$(".duplicate").text("사용 가능한 아이디 입니다.");
 			$(".duplicate").css("color","green");
-			$("#joinBt").attr("disabled", false);
+			$("#joinBt").attr("disabled", false);	// 가입 가능한 경우 버튼 활성화
 		}else{	// 입력 아이디가 중복이다
 			$(".duplicate").text("이미 사용중인 아이디입니다.");
 			$(".duplicate").css("color", "red");
-			$("#joinBt").attr("disabled", true);
+			$("#joinBt").attr("disabled", true);	// 중복 아이디면 버튼 비활성화
 		}
 	});
 
