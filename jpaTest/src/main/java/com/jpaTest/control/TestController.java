@@ -11,7 +11,6 @@ public class TestController {
     public String test(){
 
         TestMember m = new TestMember();
-        m.
         return "test";
     }
 }
