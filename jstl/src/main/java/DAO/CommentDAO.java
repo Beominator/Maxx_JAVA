@@ -50,7 +50,7 @@ public class CommentDAO extends DBConnect{
 		try {
 			pt = conn.prepareStatement(sql);
 			pt.setInt(1, cid);
-			pt.executeQuery();
+			pt.executeUpdate();
 			
 		}catch(SQLException e) {
 			System.out.println("댓글 삭제 실패");
