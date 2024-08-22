@@ -1,0 +1,37 @@
+
+package com.members.service;
+
+import com.members.Dto.MemberDto;
+import com.members.Dto.MemberLoginDto;
+import com.members.Repository.MemberRepository;
+import com.members.entity.Member;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberService {
+    @Autowired
+    private MemberRepository memberRepository;
+
+    public void 회원가입저장(MemberDto memberDto) {
+
+        Member member = memberDto.createEntity();
+
+        memberRepository.save(member);
+    }
+
+    public void 로그인처리(MemberLoginDto memberLoginDto) {
+        // select * from member_test where user_id=xxx and password=xxx
+        memberRepository.findByUserIdAndPassword(memberLoginDto.getUserId(), memberLoginDto.getPassword());
+    }
+
+    public MemberDto 회원정보얻기(String userId) {
+
+        Member member = memberRepository.findByUserId(userId);
+        MemberDto memberDto = MemberDto.of(member);
+        return memberDto;
+    }
+}
+
+// findByTel
